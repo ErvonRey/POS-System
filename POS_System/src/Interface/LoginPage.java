@@ -9,8 +9,15 @@ public class LoginPage extends javax.swing.JFrame {
     /**
      * Creates new form LoginPage
      */
+    
+    
     public LoginPage() {
         initComponents();
+    }
+    
+    public void checkLogin(){
+        
+        
     }
     
     /**
@@ -32,6 +39,7 @@ public class LoginPage extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         lInformationalText = new javax.swing.JLabel();
         lCreateAccount = new javax.swing.JLabel();
+        btnLoginAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login Page");
@@ -82,6 +90,16 @@ public class LoginPage extends javax.swing.JFrame {
         lCreateAccount.setText("create an account");
         lCreateAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnLoginAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        btnLoginAdmin.setForeground(new java.awt.Color(0, 0, 0));
+        btnLoginAdmin.setText("Login as Admin");
+        btnLoginAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        btnLoginAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLoginAdminMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -105,7 +123,8 @@ public class LoginPage extends javax.swing.JFrame {
                                 .addComponent(lInformationalText)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lCreateAccount)
-                                .addGap(13, 13, 13)))))
+                                .addGap(13, 13, 13))
+                            .addComponent(btnLoginAdmin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,13 +138,15 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tfPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addComponent(lUsername1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lInformationalText)
                     .addComponent(lCreateAccount))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLoginAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_backgroundLayout = new javax.swing.GroupLayout(panel_background);
@@ -147,9 +168,9 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(panel_backgroundLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lHeader)
-                .addGap(69, 69, 69)
+                .addGap(52, 52, 52)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         getContentPane().add(panel_background);
@@ -160,10 +181,14 @@ public class LoginPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-        
-        
-        
+//        System.out.println("Login normally");
+
+
     }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnLoginAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginAdminMouseClicked
+//        System.out.println("Login as admin");
+    }//GEN-LAST:event_btnLoginAdminMouseClicked
 
     /**
      * @param args the command line arguments
@@ -202,6 +227,7 @@ public class LoginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLoginAdmin;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lCreateAccount;
     private javax.swing.JLabel lHeader;
